@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-environmenter": [
+        "dist/ng-environmenter"
+      ],
+      "ng-environmenter/*": [
+        "dist/ng-environmenter/*"
+      ]
+    }
   }
 }
