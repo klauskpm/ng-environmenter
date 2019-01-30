@@ -1,6 +1,9 @@
 # ng-environmenter
 Angular environment sharing done easy
 
+![](https://img.shields.io/github/issues/klauskpm/ng-environmenter.svg)
+![](https://img.shields.io/github/license/klauskpm/ng-environmenter.svg)
+
 ## Getting started
 Install the package:
 `npm install ng-environmenter`
