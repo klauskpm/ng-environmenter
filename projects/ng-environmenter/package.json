@@ -1,7 +1,8 @@
 {
   "name": "ng-environmenter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "git@github.com:klauskpm/ng-environmenter.git",
+  "keywords": ["angular", "environment", "ng-environmenter", "angular environments"],
   "peerDependencies": {
     "@angular/common": ">= 6.0.0",
     "@angular/core": ">= 6.0.0"
