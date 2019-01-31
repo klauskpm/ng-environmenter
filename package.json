@@ -1,6 +1,8 @@
 {
   "name": "ng-environmenter",
   "version": "0.0.0",
+  "author": "Klaus Kazlauskas <klausmachado@gmail.com>",
+  "repository": "git@github.com:klauskpm/ng-environmenter.git",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +10,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "ng build ng-environmenter && cd dist/ng-environmenter && npm publish"
+    "publish": "ng build ng-environmenter && cd dist/ng-environmenter && npm publish",
+    "update-coc": "weallbehave -o ./.github",
+    "update-contrib": "weallcontribute -o ./.github",
+    "update-help": "npm run update-coc && npm run update-contrib"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",
@@ -30,9 +35,9 @@
     "@angular/cli": "~7.2.3",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -47,6 +52,8 @@
     "tsickle": ">=0.34.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "~3.2.2",
+    "weallbehave": "^1.2.0",
+    "weallcontribute": "^1.0.8"
   }
 }

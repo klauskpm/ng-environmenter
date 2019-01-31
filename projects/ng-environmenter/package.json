@@ -1,6 +1,7 @@
 {
   "name": "ng-environmenter",
   "version": "0.1.2",
+  "author": "Klaus Kazlauskas <klausmachado@gmail.com>",
   "repository": "git@github.com:klauskpm/ng-environmenter.git",
   "keywords": ["angular", "environment", "ng-environmenter", "angular environments"],
   "peerDependencies": {
