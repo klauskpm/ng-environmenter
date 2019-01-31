@@ -21,8 +21,9 @@
           "options": {
             "main": "projects/ng-environmenter/src/test.ts",
             "tsConfig": "projects/ng-environmenter/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-environmenter/karma.conf.js"
-          }
+            "karmaConfig": "projects/ng-environmenter/karma.conf.js",
+            "codeCoverage": true
+          },
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
