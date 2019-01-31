@@ -26,23 +26,29 @@ describe('Environmenter', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return the global environment', function () {
-    const globalEnvironment = service.getGlobalEnvironment();
-    expect(globalEnvironment.title).toEqual(environment.global.title);
-    expect(globalEnvironment.shareIt).toEqual(environment.global.shareIt);
-    expect(globalEnvironment.title).not.toEqual(environment.application.title);
+  describe('#getGlobalEnvironment', () => {
+    it('should return the global environment', () => {
+      const globalEnvironment = service.getGlobalEnvironment();
+      expect(globalEnvironment.title).toEqual(environment.global.title);
+      expect(globalEnvironment.shareIt).toEqual(environment.global.shareIt);
+      expect(globalEnvironment.title).not.toEqual(environment.application.title);
+    });
   });
 
-  it('should return the application environment', function () {
-    const globalEnvironment = service.getApplicationEnvironment();
-    expect(globalEnvironment.title).toEqual(environment.application.title);
-    expect(globalEnvironment.shareIt).toBeUndefined();
-    expect(globalEnvironment.title).not.toEqual(environment.global.title);
+  describe('#getApplicationEnvironment', () => {
+    it('should return the application environment', () => {
+      const globalEnvironment = service.getApplicationEnvironment();
+      expect(globalEnvironment.title).toEqual(environment.application.title);
+      expect(globalEnvironment.shareIt).toBeUndefined();
+      expect(globalEnvironment.title).not.toEqual(environment.global.title);
+    });
   });
 
-  it('should return a mix of global and application environments', function () {
-    const globalEnvironment = service.getEnvironment();
-    expect(globalEnvironment.title).toEqual(environment.application.title);
-    expect(globalEnvironment.shareIt).toEqual(environment.global.shareIt);
+  describe('#getEnvironment', () => {
+    it('should return a mix of global and application environments', () => {
+      const globalEnvironment = service.getEnvironment();
+      expect(globalEnvironment.title).toEqual(environment.application.title);
+      expect(globalEnvironment.shareIt).toEqual(environment.global.shareIt);
+    });
   });
 });
