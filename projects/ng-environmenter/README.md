@@ -20,9 +20,10 @@ export const globalEnvironment = {
 And extend it on yours application environment file:
 ```typescript
 // projects/app/src/environments/environment.ts
+import { Environment } from 'ng-environemnter';
 import { globalEnvironment } from '../../../../environments/environment.ts';
 
-export const environment = {
+export const environment: Environment = {
   application: {},
   global: globalEnvironment
 };
