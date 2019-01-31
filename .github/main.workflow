@@ -1,9 +1,26 @@
 workflow "Build and deploy on push" {
   on = "push"
-  resolves = ["run tests"]
+  resolves = ["Install packages", "Publish coverage", "Build"]
 }
 
-action "run tests" {
+action "Install packages" {
   uses = "actions/npm@3c8332795d5443adc712d30fa147db61fd520b5a"
-  runs = "npm run test"
+  args = "install"
+}
+
+action "Run tests" {
+  uses = "actions/npm@3c8332795d5443adc712d30fa147db61fd520b5a"
+  needs = ["Install packages"]
+  args = "test"
+}
+
+action "Build" {
+  uses = "actions/npm@3c8332795d5443adc712d30fa147db61fd520b5a"
+  needs = ["Run tests"]
+  args = "build"
+}
+
+action "Publish coverage" {
+  uses = "actions/npm@3c8332795d5443adc712d30fa147db61fd520b5a"
+  needs = ["Run tests"]
 }
