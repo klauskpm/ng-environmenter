@@ -15,7 +15,7 @@ action "Install packages" {
 action "Run tests" {
   uses = "actions/npm@3c8332795d5443adc712d30fa147db61fd520b5a"
   needs = ["Install packages"]
-  args = "test"
+  args = "test -- --no-watch --no-progress --browsers ChromeHeadlessCI"
 }
 
 action "Build" {
